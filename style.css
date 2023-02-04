@@ -1,3 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+ul, ol{
+    list-style: none;
+}
+
 body{
-    background-color: aqua;
+    /* background-color: #289E8A; */
+    display: grid;
+    grid-template: 1fr 4fr / 1fr 3fr 1fr;
+    max-height: 100vh;
+    
+}
+
+/* Header Styling */
+
+header{
+    grid-area: 1 / 2 / 1 / 4;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    justify-content: start;
+    align-items: center;
+    padding:0 1rem;
+    column-gap: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+div.search,
+div.top-right,
+div.bottom-left,
+div.header-buttons{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.profile-image{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+}
+
+.greeting-image{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+}
+
+div.search{
+    grid-area: 1 / 1;
+}
+
+div.top-right{
+    grid-area: 1 / 2;
+    justify-self: end;
+    gap: 5px;
+}
+
+div.top-right .full-name{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+div.bottom-left{
+    grid-area: 2 / 1;
+}
+
+div.bottom-left span{
+    font-size: 24px;
+}
+
+div.header-buttons{
+    grid-area: 2 / 2;
+    justify-self: end;
+}
+
+input[type="search"]{
+    border: none;
+    width: 80%;
+    border-radius: 10px;
+    padding: 0.6rem;
+    background-color: #e2e8f0;
+}
+
+input[type="search"]:focus{
+    outline: none;
+}
+
+div.bottom-left .greeting-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.top-right{
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+
+div.header-buttons{
+    align-items: center;
+    gap: 3rem;
+}
+
+.header-btn{
+    padding: 10px 25px;
+    background-color: #0ea5e9;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.header-btn:hover{
+    opacity: 0.8;
+}
+
+/* Sidebar Styling */
+
+aside{
+    grid-area: span 2 / 1;
+    background-color: #73BB90;
+    color: white;
+}
+
+div.hero{
+    grid-area: 2 / 2;
+}
+
+div.updates{
+    grid-area: 2 / 3;
+}
+
+h1{
+    display: flex;
+    font-size: 2rem;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: start;
+    align-items: center;
+}
+
+div.nav-cards,
+div.settings-cards{
+    padding-top: 2rem;
+}
+
+div.nav-card,
+div.settings-card{
+    display: flex;
+    gap: 1rem;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: start;
+    padding: 0.6rem;
+    padding-left: 1.5rem;
+    font-size: 22px;
+}
+
+div.current-card{
+    background-color: #40a067;
+}
+
+/* Hero styling */
+.hero{
+    padding: 1rem;
+    background-color: #e2e8f0;
+}
+.your-projects{
+    font-size: 24px;
+    font-weight: 600;
+    padding: 0 1rem;
+}
+
+.hero .projects{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    row-gap: 3rem;
+}
+
+.project-card{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 10px;
+}
+
+.project-card .icons{
+    align-self: flex-end;
+    margin: 0 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+
+.project-card p{
+    font-size: 16px;
+    padding: 5px;
+}
+
+/* Updates styling */
+.updates{
+    background-color: #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+h5{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.announcement-card{
+    margin: 1rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+h6{
+    font-size: 18px;
+}
+
+.announcement-card p{ 
+    padding: 5px 0;
+    font-size: 16px;
+}
+
+.trending h4{
+    font-size: 24px;
+}
+
+
+.trending-card{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 10px;
+    margin: 1rem;
+}
+
+.trending-profile{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* images' styling */
+.svg-big{
+    width: 56px;
+}
+
+.svg{
+    width: 32px;
+    color: white;
+}
+
+.trending-profile img{
+    width: 3rem;
+    height: 3rem;
+}
+
+svg{
+    fill: white;
 }
